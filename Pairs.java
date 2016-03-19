@@ -15,10 +15,8 @@ public class Pairs
         num = sx.nextInt();
         int[] arr = new int[n];
         for(int i=0;i<n;i++)
-        {
             arr[i] = sx.nextInt();
-        }
-
+            
         System.out.println(pairs(arr,num));
     }
 
@@ -37,7 +35,6 @@ public class Pairs
         }
         return result;
     }
-        
 }
 
 
