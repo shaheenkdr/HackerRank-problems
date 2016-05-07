@@ -1,0 +1,44 @@
+/**
+ * Sherlock and Shadows
+ * https://www.hackerrank.com/challenges/sherlock-and-squares
+ */
+
+
+import java.util.*;
+public class Solution
+{
+	public static void main(String[] args)
+	{
+		Scanner sx = new Scanner(System.in);
+		final int TC = sx.nextInt();
+		int start,end,count;
+		for(int c=0;c<TC;c++)
+		{
+			start = sx.nextInt();
+			end = sx.nextInt();
+			count = 0;
+			/**
+			 * Finding square root to take the lower
+			 * bound for calculations
+			 */
+			int res = (int)Math.sqrt(start);
+
+			/**
+			* If square of the value of 'res' lies in
+			* between 'start' and 'end', it's square! 
+			*/
+			for(;res<=end;res++)
+			{
+				if(res*res<=end && res*res>=start)
+					++count;
+				if(res*res>end)
+					break;
+			}
+
+			System.out.println(count);
+			
+		}
+		sx.close();
+	}
+
+}
